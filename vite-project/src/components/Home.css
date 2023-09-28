@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Apply styles to the main container */
+  .main {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* Align items at the top */
+    line-height: 1.5;
+    color: black;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Apply styles to the item container */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Apply styles to the item row (grid) */
+  .row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Display 4 items per row */
+    grid-gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Apply styles to each individual item card */
+  .itemCard {
+    flex: 1 1 calc(25% - 20px); /* Adjust sizing for 4 items per row */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer; /* Add a pointer cursor on hover */
+  }
+  
+  /* Add hover effect for item cards */
+  .itemCard:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Add hover effect for item images */
+  .itemCard:hover .item-img {
+    transform: scale(1.05); /* Slightly increase image size on hover */
+  }
